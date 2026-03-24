@@ -2132,22 +2132,23 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:mythicbytecode/mythicbyte-facturacion-electronica.git",
-                "reference": "82941dbebef57b14082461bb4568130ea6ec0f83"
+                "reference": "e12c2497464d46ae8ec7e4771d3360d4e50034d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mythicbytecode/mythicbyte-facturacion-electronica/zipball/82941dbebef57b14082461bb4568130ea6ec0f83",
-                "reference": "82941dbebef57b14082461bb4568130ea6ec0f83",
+                "url": "https://api.github.com/repos/mythicbytecode/mythicbyte-facturacion-electronica/zipball/e12c2497464d46ae8ec7e4771d3360d4e50034d5",
+                "reference": "e12c2497464d46ae8ec7e4771d3360d4e50034d5",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
-                "php": "^7.4|^8.0|^8.1|^8.2|^8.3"
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+                "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4"
             },
             "require-dev": {
                 "orchestra/testbench": "^10.9",
                 "phpunit/phpunit": "^12.5"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2213,7 +2214,7 @@
                 "source": "https://github.com/mythicbytecode/mythicbyte-facturacion-electronica/tree/develop",
                 "issues": "https://github.com/mythicbytecode/mythicbyte-facturacion-electronica/issues"
             },
-            "time": "2026-03-18T17:30:00+00:00"
+            "time": "2026-03-23T23:15:38+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -3112,16 +3113,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.21",
+            "version": "v0.12.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97"
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
                 "shasum": ""
             },
             "require": {
@@ -3185,9 +3186,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.21"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.22"
             },
-            "time": "2026-03-06T21:21:28+00:00"
+            "time": "2026-03-22T23:03:24+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8385,5 +8386,5 @@
         "php": "^7.3|^8.3"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
