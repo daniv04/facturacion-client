@@ -22,3 +22,6 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+storage/certificates/certificado.p12
+package-lock.json
+
