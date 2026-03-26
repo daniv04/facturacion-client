@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ResponseViewer from '../ResponseViewer';
 import EmisorSection from './EmisorSection';
 import ReceptorSection from './ReceptorSection';
 import EncabezadoSection from './EncabezadoSection';
@@ -67,9 +68,10 @@ const INITIAL_FORM = {
 
 export default function InvoiceForm() {
     const [form, setForm] = useState(INITIAL_FORM);
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors]     = useState({});
     const [submitting, setSubmitting] = useState(false);
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess]   = useState(false);
+    const [response, setResponse] = useState(null);
 
     function handleChange(path, value) {
         setForm(prev => setIn(prev, path, value));
@@ -84,14 +86,16 @@ export default function InvoiceForm() {
         setSubmitting(true);
         setErrors({});
         setSuccess(false);
+        setResponse(null);
 
         try {
             const { data } = await window.axios.post('/facturacion', buildPayload(form));
-            console.log('✅ Respuesta del servidor:', data);
+            setResponse(data);
             setSuccess(true);
         } catch (err) {
-            console.error('❌ Error:', err.response?.data ?? err.message);
-            setErrors(err.response?.data?.errors ?? {});
+            const errData = err.response?.data ?? { message: err.message };
+            setResponse(errData);
+            setErrors(errData.errors ?? {});
 
             // Scroll al primer error
             setTimeout(() => {
@@ -166,6 +170,8 @@ export default function InvoiceForm() {
                     </button>
                 </div>
             </form>
+
+            <ResponseViewer response={response} isError={Object.keys(errors).length > 0} />
         </div>
     );
 }
